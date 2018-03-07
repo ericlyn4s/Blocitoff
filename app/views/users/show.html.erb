@@ -1,1 +1,16 @@
-<h3>User:</h3><%= @user.email %>
+<h3>User:</h3>
+  <h4><%= @user.email %></h4>
+    <br>
+
+    <div class="media-center">
+      <div class="container">
+        <%= render partial: 'items/form', locals: { user: @user, item: @item } %>
+      </div>
+    </div>
+
+    <div class="container">
+      <% @items.each do |item| %>
+        <%= render partial: 'items/item', locals: {item: item}%>
+          <br>
+        <% end %>
+    </div>
