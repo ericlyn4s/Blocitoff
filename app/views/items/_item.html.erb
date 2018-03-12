@@ -1,4 +1,7 @@
 <body>
-    <td><%= item.name %><%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-remove' %></td>
+    <td><%= item.name %></td>
+
+    <td><%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-remove' %></td>
+    <div><%= distance_of_time_in_words(item.created_at, Time.now)%> ago</div>
 </body>
 <br>
