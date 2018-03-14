@@ -41,6 +41,8 @@ source 'https://rubygems.org'
 
   gem 'faker'
 
+  gem 'whenever', require: false
+
  group :development do
    gem 'listen', '~> 3.0.5'
  end
